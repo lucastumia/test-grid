@@ -4,11 +4,13 @@ table {
 
 tr.example-detail-row {
   height: 0;
+  background: lightcyan;
 }
 
 .example-expanded-row {
   font-weight: bold;
   font-style: italic;
+  background: lightcyan;
 }
 
 .example-element-row td {

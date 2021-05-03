@@ -8,13 +8,13 @@ import { DetailGridComponent } from './detail-grid/detail-grid.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
-import { SortGridComponent } from './sort-grid/sort-grid.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DetailGridComponent,
-    SortGridComponent,
+    ToolbarComponent,
   ],
   imports: [
     BrowserModule,

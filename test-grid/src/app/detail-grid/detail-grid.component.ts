@@ -10,15 +10,15 @@ import {MatSort} from '@angular/material/sort';
   animations: [
     trigger('detailExpand', [
       state('collapsed', style({height: '0px', minHeight: '0'})),
-      state('expanded', style({height: '150px'})),
-      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
+      state('expanded', style({height: '150px',background:'lightcyan'})),
+      transition('expanded <=> collapsed', animate('150ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
     ]),
   ],
 })
 
 export class DetailGridComponent implements AfterViewInit {
 
-  title = 'detailed-grid';
+  title = 'Prototype grid';
 
   dataSource = new MatTableDataSource(ELEMENT_DATA);
   columnsToDisplay = ['name', 'weight', 'symbol', 'position'];
@@ -29,7 +29,9 @@ export class DetailGridComponent implements AfterViewInit {
   constructor() {
   }
 
-  // tslint:disable-next-line:typedef
+  public brol() {
+  }
+
   ngAfterViewInit() {
     // @ts-ignore
     this.dataSource.sort = this.sort;
