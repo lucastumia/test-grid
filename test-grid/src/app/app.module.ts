@@ -14,7 +14,7 @@ import { SortGridComponent } from './sort-grid/sort-grid.component';
   declarations: [
     AppComponent,
     DetailGridComponent,
-    SortGridComponent
+    SortGridComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatSort} from '@angular/material/sort';
 
 @Component({
   selector: 'app-detail-grid',
@@ -8,24 +10,30 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
   animations: [
     trigger('detailExpand', [
       state('collapsed', style({height: '0px', minHeight: '0'})),
-      state('expanded', style({height: '*'})),
+      state('expanded', style({height: '150px'})),
       transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
     ]),
   ],
 })
 
-export class DetailGridComponent implements OnInit {
+export class DetailGridComponent implements AfterViewInit {
 
-  dataSource = ELEMENT_DATA;
+  title = 'detailed-grid';
+
+  dataSource = new MatTableDataSource(ELEMENT_DATA);
   columnsToDisplay = ['name', 'weight', 'symbol', 'position'];
   expandedElement: PeriodicElement | null | undefined;
 
-  constructor() { }
+  @ViewChild(MatSort) sort: MatSort | undefined;
 
-  ngOnInit(): void {
+  constructor() {
   }
 
-
+  // tslint:disable-next-line:typedef
+  ngAfterViewInit() {
+    // @ts-ignore
+    this.dataSource.sort = this.sort;
+  }
 
 }
 

@@ -9,6 +9,7 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 export class SortGridComponent implements AfterViewInit {
 
+  title = 'sorted-grid';
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
