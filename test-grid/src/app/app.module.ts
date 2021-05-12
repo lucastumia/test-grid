@@ -13,6 +13,7 @@ import {ToolbarComponent} from './toolbar/toolbar.component';
 import {JqxTestsComponent} from './jqx-tests/jqx-tests.component';
 import {jqxBarGaugeModule} from 'jqwidgets-ng/jqxbargauge';
 import {jqxTreeGridModule} from 'jqwidgets-ng/jqxtreegrid';
+import { DhtmlComponent } from './dhtml/dhtml.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import {jqxTreeGridModule} from 'jqwidgets-ng/jqxtreegrid';
     DetailGridComponent,
     ToolbarComponent,
     JqxTestsComponent,
+    DhtmlComponent,
   ],
   imports: [
     BrowserModule,
